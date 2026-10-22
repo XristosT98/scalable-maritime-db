@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # 1. Η Νέα Βάση Δεδομένων (V2)
+  mongo_v2:
+    image: mongo:latest
+    container_name: maritime_mongo_v2
+    ports:
+      - "27018:27017"  # Εξωτερικά 27018
+    volumes:
+      - mongo_data_v2:/data/db
+
+  # 2. Το Νέο Script (ETL Temporal)
+  etl_v2:
+    build: .
+    container_name: maritime_etl_v2
+    depends_on:
+      - mongo_v2
+    environment:
+      # Συνδέεται εσωτερικά στη βάση 'mongo_v2'
+      - MONGO_URI=mongodb://mongo_v2:27017/
+    volumes:
+      - ./:/app
+
+volumes:
+  mongo_data_v2:
