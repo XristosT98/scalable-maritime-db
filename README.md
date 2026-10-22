@@ -31,17 +31,15 @@ This project implements a comprehensive Big Data management system for the marit
   |    |-- ais_data.csv              # Raw AIS data (Download from external link)
   |    |-- ais_static/               # Static ship details (CSV)
   |    |-- noaa_weather/             # Weather shapefiles
-  |
-  |-- [docs] 
-       |-- Technical_Report.pdf      # Detailed Technical Report
-       |-- Project_Presentation.pptx # Project Presentation
-       |-- benchmarks.png            # Visualized performance results
+  |-- Technical_Report.pdf      # Detailed Technical Report
+  |-- Project_Presentation.pptx # Project Presentation
+  |-- benchmarks.png            # Visualized performance results
 ```
 
 ## 4. PREREQUISITES & INSTALLATION
 1. **Docker Desktop** (Installed and running).
 2. **Python 3.10+** (To execute the scripts).
-3. **Data Download:** Place the required datasets in the `data/` directory. *(Note: Raw data files are excluded from this repository due to size limits).*
+3. **Data Download:** Download the dataset from [[Link](https://drive.google.com/file/d/1HL1D9w-wGlbyjhDwD6uJ4XsolPbsSwjS/view?usp=drive_link)] and extract it inside the data/ directory *(Note: Raw data files are excluded from this repository due to size limits).*
 
 **Start the Database:**
 ```bash
